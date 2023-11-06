@@ -86,15 +86,15 @@
 
    2. 在Fixed Frame中选择base_link
 
-      ![image-20231105211155304](/home/bletilla/.config/Typora/typora-user-images/image-20231105211155304.png)
+      ![image-20231105211155304](img/image-20231105211155304.png)
 
    2. Add中选择RobotModel
 
-      ![image-20231105211421762](/home/bletilla/.config/Typora/typora-user-images/image-20231105211421762.png)
+      ![image-20231105211421762](img/image-20231105211421762.png)
 
    3. 然后就可以在rviz里看到车的模型了。这个时候可以检查一下是不是所有需要的部分都有了。接着就可以在窗口里调整每个joint的角度，从而看到实际上模型的运动状态了。
 
-      ![image-20231105211611275](/home/bletilla/.config/Typora/typora-user-images/image-20231105211611275.png)
+      ![image-20231105211611275](img/image-20231105211611275.png)
 
    ### gazebo
 
@@ -351,7 +351,7 @@
 
    - 点击plugin选择Topics下的Message Publisher。
    - 加入话题，例如下图，对应修改即可。
-   - ![image-20231106201825320](/home/bletilla/.config/Typora/typora-user-images/image-20231106201825320.png)
+   - ![image-20231106201825320](img/image-20231106201825320.png)
    - 最后对话题打上钩就可以发布话题了，之后修改data的数据就可以看到模型在gazebo中的运动情况了。
 
 ## 已经做了但没有成功/做完的部分
