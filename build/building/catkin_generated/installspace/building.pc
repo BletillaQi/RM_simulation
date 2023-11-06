@@ -1,8 +1,0 @@
-prefix=/home/bletilla/Code/sim/install
-
-Name: building
-Description: Description of building
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

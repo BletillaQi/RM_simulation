@@ -1,8 +1,0 @@
-prefix=/home/bletilla/Code/sim/install
-
-Name: Aiolos
-Description: Description of Aiolos
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
