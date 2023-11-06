@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="car" xmlns:xacro="https://ros.org/wiki/xacro">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0049014 -0.0036063 -0.058427"
+        rpy="0 0 0" />
+      <mass
+        value="5.8503" />
+      <inertia
+        ixx="0.011994"
+        ixy="7.4275E-07"
+        ixz="-1.1787E-05"
+        iyy="0.01387"
+        iyz="3.3464E-06"
+        izz="0.021476" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_lf_link">
+    <inertial>
+      <origin
+        xyz="0.000425163309472953 -0.0232764089351127 -2.84255029201208E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.524145313750761" />
+      <inertia
+        ixx="0.000688639304104414"
+        ixy="7.10936607932968E-08"
+        ixz="-6.9563762652538E-08"
+        iyy="0.00122438205405382"
+        iyz="-4.07144790425353E-08"
+        izz="0.000688580719825072" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_lf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_lf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_lf_joint"
+    type="continuous">
+    <origin
+      xyz="0.17754 0.1989 -0.10358"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lf_link" />
+    <axis
+      xyz="0 -1 0" />
+    <dynamics 
+      damping="0.7"/>
+    <limit
+      effort="300"
+      velocity="1"
+      lower="-2.96"
+      upper="2.96"/>
+  </joint>
+  <link
+    name="wheel_lb_link">
+    <inertial>
+      <origin
+        xyz="-0.000425166246138892 -0.0232766609843378 -2.84231849670552E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.524142286383221" />
+      <inertia
+        ixx="0.000688636283973778"
+        ixy="-7.1115457277013E-08"
+        ixz="6.96025807631937E-08"
+        iyy="0.00122437755470024"
+        iyz="-4.06870971219051E-08"
+        izz="0.000688577585028545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_lb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_lb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_lb_joint"
+    type="continuous">
+    <origin
+      xyz="-0.17754 0.1989 -0.10358"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lb_link" />
+    <axis
+      xyz="0 -1 0" />
+    <dynamics 
+      damping="0.7"/>
+    <limit
+      effort="300"
+      velocity="1"
+      lower="-2.96"
+      upper="2.96"/>
+  </joint>
+  <link
+    name="wheel_rf_link">
+    <inertial>
+      <origin
+        xyz="0.000425521820347274 0.0232766609453783 2.24800625847482E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.524142282745682" />
+      <inertia
+        ixx="0.000688655735367397"
+        ixy="-7.54598020167068E-08"
+        ixz="-6.06732759739453E-08"
+        iyy="0.00122438483249422"
+        iyz="3.19161781931993E-08"
+        izz="0.000688565741995859" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_rf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_rf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rf_joint"
+    type="continuous">
+    <origin
+      xyz="0.17823 -0.1989 -0.091563"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rf_link" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics 
+      damping="0.7"/>
+    <limit
+      effort="300"
+      velocity="1"
+      lower="-2.96"
+      upper="2.96"/>
+  </joint>
+  <link
+    name="wheel_rb_link">
+    <inertial>
+      <origin
+        xyz="-0.000425519195847546 0.0232764088870284 2.24774180230536E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.52414530931368" />
+      <inertia
+        ixx="0.000688654939651809"
+        ixy="7.54414800849268E-08"
+        ixz="6.06491803113381E-08"
+        iyy="0.00122438204669816"
+        iyz="3.19460390663524E-08"
+        izz="0.000688565076234101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_rb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/wheel_rb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rb_joint"
+    type="continuous">
+    <origin
+      xyz="-0.17823 -0.1989 -0.091563"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rb_link" />
+    <axis
+      xyz="0 -1 0" />
+    <dynamics 
+      damping="0.7"/>
+    <limit
+      effort="300"
+      velocity="1"
+      lower="-2.96"
+      upper="2.96"/>
+  </joint>
+  <link
+    name="gimbal_yaw_link">
+    <inertial>
+      <origin
+        xyz="0.000383783122808859 0.011285860161157 0.140748802654193"
+        rpy="0 0 0" />
+      <mass
+        value="2.45580013355636" />
+      <inertia
+        ixx="0.00215139679122234"
+        ixy="-6.61664317960938E-06"
+        ixz="-5.59915912339326E-07"
+        iyy="0.00271140345627099"
+        iyz="-3.82794015317662E-06"
+        izz="0.00265732396216447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/gimbal_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/gimbal_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gimbal_yaw_hoint"
+    type="continuous">
+    <origin
+      xyz="0.0002858 0.00048765 -0.072"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gimbal_yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics 
+      damping="0.7"/>
+    <limit
+      effort="300"
+      velocity="1"
+      lower="-2.96"
+      upper="2.96"/>
+  </joint>
+  <link
+    name="gimbal_pitch_link">
+    <inertial>
+      <origin
+        xyz="-0.0021902 0.086128 0.034694"
+        rpy="0 0 0" />
+      <mass
+        value="1.5407" />
+      <inertia
+        ixx="0.0017891"
+        ixy="-9.7961E-06"
+        ixz="7.9856E-06"
+        iyy="0.0019985"
+        iyz="-7.8739E-07"
+        izz="0.0033939" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/gimbal_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aiolos/meshes/gimbal_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gimbal_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.00063573 -0.083583 0.267"
+      rpy="0 0 0" />
+    <parent
+      link="gimbal_yaw_link" />
+    <child
+      link="gimbal_pitch_link" />
+    <axis
+      xyz="0.011089 -0.99994 0" />
+    <dynamics 
+      damping="0.7"/>
+    <limit
+      effort="300"
+      velocity="1"
+      lower="-2.96"
+      upper="2.96"/>
+  </joint>
+
+  <!-- Transmissions for ROS Control -->
+  <xacro:macro name="transmission_block" params="tran_name joint_name motor_name">
+    <transmission name="${tran_name}">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="${joint_name}">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="$motor_name">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+  </xacro:macro>
+
+  <xacro:transmission_block tran_name="wheel_lf_tran" joint_name="wheel_lf_joint" motor_name="wheel_lf_motor"/>
+  <xacro:transmission_block tran_name="wheel_lf_tran" joint_name="wheel_lb_joint" motor_name="wheel_lb_motor"/>
+  <xacro:transmission_block tran_name="wheel_lf_tran" joint_name="wheel_rf_joint" motor_name="wheel_rf_motor"/>
+  <xacro:transmission_block tran_name="wheel_lf_tran" joint_name="wheel_rb_joint" motor_name="wheel_rb_motor"/>
+  <xacro:transmission_block tran_name="wheel_lf_tran" joint_name="gimbal_yaw_hoint" motor_name="gimbal_yaw_motor"/>
+  <xacro:transmission_block tran_name="wheel_lf_tran" joint_name="gimbal_pitch_joint" motor_name="gimbal_pitch_motor"/>
+  <!--gazebo plugin-->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/car</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>

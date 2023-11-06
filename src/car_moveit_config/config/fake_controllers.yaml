@@ -1,0 +1,38 @@
+controller_list:
+  - name: fake_pitch_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - gimbal_pitch_joint
+  - name: fake_yaw_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - gimbal_yaw_hoint
+  - name: fake_lf_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wheel_lf_joint
+  - name: fake_lb_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wheel_lb_joint
+  - name: fake_rf_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wheel_rf_joint
+  - name: fake_rb_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wheel_rb_joint
+initial:  # Define initial robot poses per group
+  - group: pitch
+    pose: pitch_pos
+  - group: yaw
+    pose: yaw_pos
+  - group: lf
+    pose: lf
+  - group: lb
+    pose: lb
+  - group: rf
+    pose: rf
+  - group: rb
+    pose: rb

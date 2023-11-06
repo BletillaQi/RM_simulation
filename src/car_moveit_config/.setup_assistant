@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: aiolos
+    relative_path: urdf/aiolos.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/aiolos.srdf
+  CONFIG:
+    author_name: car
+    author_email: 1370670703@qq.com
+    generated_timestamp: 1698758248

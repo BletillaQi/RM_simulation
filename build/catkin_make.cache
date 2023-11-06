@@ -1,0 +1,2 @@
+aiolos:building:car_control:car_moveit_config:catkin
+-DCATKIN_DEVEL_PREFIX=/home/bletilla/Code/sim/devel -DCMAKE_INSTALL_PREFIX=/home/bletilla/Code/sim/install -G Unix Makefiles

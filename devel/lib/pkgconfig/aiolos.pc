@@ -1,0 +1,8 @@
+prefix=/home/bletilla/Code/sim/devel
+
+Name: aiolos
+Description: Description of aiolos
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
